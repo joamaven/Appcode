@@ -12,9 +12,9 @@ jobs:
           command: |
             version="build-$CIRCLE_BUILD_NUM"
             echo $version
-            docker build -t joamaven/todo-app:$version .
+            docker build -t manala2023/todo-app:$version .
             echo $DOCKER_PASSWORD | docker login -u $DOCKER_USERNAME --password-stdin
-            docker push joamaven/todo-app:$version
+            docker push manala2023/todo-app:$version
 
   Update_manifest:
     docker:
